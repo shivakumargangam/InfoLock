@@ -1,0 +1,57 @@
+.LPNavMain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(180, 177, 177);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.LPNavLinks{
+    display: flex;
+    flex-direction: row;
+}
+.LPNavLinks span{
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.LPNavlogo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+}
+.LPNavlogo img{
+    height: 75px;
+    margin-right: 10px;
+}
+.LPNavlogo span{
+    font-size: 65px;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+.LPNavSigndiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+.LPNavSigndiv span{
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+.LPNavSignupBox{
+    border: 3px solid #00A82D;
+    border-radius: 20px;
+}
+.LPNavSignupBox span{
+    padding-left: 15px;
+    padding-right: 15px;
+}
