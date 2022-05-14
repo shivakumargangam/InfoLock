@@ -1,0 +1,34 @@
+.LpNavMain{
+    background-color: rgb(225, 58, 58);
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.LPLinksDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+.LPlink{
+    color: rgb(51, 21, 21);
+}
+.LPsignindiv{
+    display: flex;
+    flex-direction: row;
+    color: rgb(40, 18, 18);
+    align-items: center;
+}
+.LPsignindiv a,h3{
+    padding: 0px 5px;
+}
+.LPsignindiv a{
+    color: green;
+}
+.LPsignindiv img{
+    height: 15px;
+}
