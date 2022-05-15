@@ -17,7 +17,7 @@ const LandingNavbar = () => {
                 <Link to='/' className='Links'><span>FAQ</span></Link>
             </div>
             <div className='LPNavSigndiv'>
-                <Link to='/' className='Links'><span>Login</span></Link>
+                <Link to='/login' className='Links'><span>Login</span></Link>
                 <div className='LPNavSignupBox'>
                     <Link to='/' className='Links'><span>Signup</span></Link>
                 </div>
