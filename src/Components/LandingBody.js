@@ -1,6 +1,7 @@
 import React from 'react';
 import Laptop from '../media/Laptop.svg';
 import '../Stylesheet/LandingBody.css';
+import {Link} from 'react-router-dom';
 const LandingBody = () => {
     return ( 
         <div className='LPbodyDiv'>
@@ -13,7 +14,7 @@ const LandingBody = () => {
                </div>
                <div className='LPSignupdiv'>
                    <div className='LPSignupWrapper'>
-                       <span>Sign up for free</span>
+                       <Link to='/' className='Links'><span>Sign up for free</span></Link>
                     </div>
                </div>
            </div>

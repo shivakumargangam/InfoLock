@@ -1,22 +1,25 @@
 import React from 'react';
 import '../Stylesheet/LandingNavbar.css';
 import Logo from '../media/Logo.svg';
+import { Link } from "react-router-dom";
 const LandingNavbar = () => {
     return ( 
         <div className='LPNavMain'>
-            <div className='LPNavlogo'>
-                <img src={Logo}/>
-                <span>INFOLOCK</span>
-            </div>
+            <Link to ='/' className='Links'>
+                <div className='LPNavlogo'>
+                    <img src={Logo}/>
+                    <span>INFOLOCK</span>
+                </div>
+            </Link>
             <div className='LPNavLinks'>
-                <span>About</span>
-                <span>Overview</span>
-                <span>FAQ</span>
+                <Link to='/test'><span>About</span></Link>
+                <Link to='/' className='Links'><span>Overview</span></Link>
+                <Link to='/' className='Links'><span>FAQ</span></Link>
             </div>
             <div className='LPNavSigndiv'>
-                <span>Login</span>
+                <Link to='/' className='Links'><span>Login</span></Link>
                 <div className='LPNavSignupBox'>
-                    <span>Signup</span>
+                    <Link to='/' className='Links'><span>Signup</span></Link>
                 </div>
             </div>
         </div>
