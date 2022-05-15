@@ -1,26 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-const LandingBody = () => {
-    return ( 
-        <div>
-            <div className=''>
-
-
-            </div>
-
-
-            <div>
-
-
-
-            </div>
-
-
-
-        </div>
-
-
-=======
 import Laptop from '../media/Laptop.svg';
 import '../Stylesheet/LandingBody.css';
 const LandingBody = () => {
@@ -43,7 +21,6 @@ const LandingBody = () => {
                <img src={Laptop}/>
            </div>
         </div>
->>>>>>> 715c5f35201cb4db3c1a8fcb340b8864aa36f6ad
      );
 }
  
