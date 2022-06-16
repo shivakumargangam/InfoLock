@@ -14,7 +14,7 @@ const LandingBody = () => {
                </div>
                <div className='LPSignupdiv'>
                    <div className='LPSignupWrapper'>
-                       <Link to='/' className='Links'><span>Sign up for free</span></Link>
+                       <Link to='/signup' className='Links'><span>Sign up for free</span></Link>
                     </div>
                </div>
            </div>
