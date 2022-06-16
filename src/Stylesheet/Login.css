@@ -1,0 +1,51 @@
+
+.LOPLogo img{
+    padding-top: 80px;
+    height: 150px;
+}
+.LOPhead { 
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 20px;;
+}
+.LOPcredbox{
+    border: 1px solid rgba(0, 0, 0, 0.338);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 2.6px;
+    text-align: left;
+    padding: 40px 40px 48px;
+}
+.LBEmailDiv{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 0 0 6px;
+    height: 40px;
+    border: 1px solid #050505;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.LBPasswordDiv{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 0 0 6px;
+    height: 40px;
+    border: 1px solid #050505;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.LBLoginButton{
+    margin-bottom: 20px;
+    background-color:  #00A82D;
+    color: #FFF;
+    font-size: 16px;    
+    height: 44px;
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+    border-color: white;
+}
