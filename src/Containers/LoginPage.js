@@ -2,7 +2,24 @@ import React from 'react';
 import LoginLogo from '../media/LoginLogo.svg'
 import '../Stylesheet/Login.css';
 import {Link} from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import app from "../firebase.config";
 const LoginPage = () => {
+    const auth=getAuth();
+    const login= ()=>{
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value;
+        signInWithEmailAndPassword(auth,email,password).then((usercredential)=>
+        {
+            const user=usercredential.user;
+            alert("Logged in");
+        })
+        .catch((error)=>
+        {
+            console.log(error);
+            alert(error);
+        })
+    }
     return ( <div >
                 <div className='LOPLogo'>
                     <img src={LoginLogo}/>
@@ -21,7 +38,7 @@ const LoginPage = () => {
                     <input type="text" id="email" placeholder="Email" data-text="Please enter a valid email address." ></input>
                     </div> */}
                 <div className="LBLoginButtonDiv">
-                    <button className="LBLoginButton" >
+                    <button className="LBLoginButton" onClick={login}>
                         Login
                     </button>
                 </div>

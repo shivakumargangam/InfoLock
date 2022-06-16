@@ -13,9 +13,11 @@ const LandingBody = () => {
                    <span>Two Lines Two Lines Two Lines Two<br/> Lines Two Lines</span>
                </div>
                <div className='LPSignupdiv'>
+               <Link to='/signup' className='Links'>
                    <div className='LPSignupWrapper'>
-                       <Link to='/signup' className='Links'><span>Sign up for free</span></Link>
+                       <span>Sign up for free</span>
                     </div>
+                    </Link>
                </div>
            </div>
            <div className='LPImagediv'>
