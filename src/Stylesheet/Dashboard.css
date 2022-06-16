@@ -1,0 +1,114 @@
+.DBNavMain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(180, 177, 177);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-bottom: 50px;
+}
+
+
+.LPNavlogo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+}
+.LPNavlogo img{
+    height: 75px;
+    margin-right: 10px;
+}
+
+.LPNavlogo span{
+    font-size: 50px;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+.DBNavLogoutdiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+.DBNavLogoutBox span{
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.DBNavLogoutBox{
+    border: 3px solid #00A82D;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.DBBody{
+    text-align: left;
+    padding-left: 30px;
+}
+.DBBody span{
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+}
+.DBNoteBox{
+    border: 1px solid rgba(0, 0, 0, 0.338);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-right: 60px;
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 2.6px;
+    cursor: pointer;
+}
+.DBNoteBox:hover{
+    background-color: #3a423c1a;
+}
+.DBNoteHead{
+    margin-bottom: 20px;
+}
+.DBNoteHead span{
+    font-size: 20px;
+    font-family: 'Poppins';
+    text-shadow: 10px 6px 5px rgba(0,0,0,0.16);
+}
+.DBNotedesc span{
+    font-size: 25px;
+    font-family: 'Poppins';
+    /* font-weight: bold; */
+    line-height: 50px;
+    text-shadow: 10px 6px 5px rgba(0,0,0,0.16);
+}
+.DBNotes{
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    padding-right: 100px;
+    gap: 20px;
+}
+.DBPlusBox{
+    border: 1px solid rgba(0, 0, 0, 0.338);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-right: 60px;
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 2.6px;
+    text-align: center;
+    cursor: pointer;   
+}
+.DBPlusBox:hover{
+    background-color: #3a423c1a;
+}
+.DBPluslogo img{
+    height: 50px;
+
+}

@@ -4,7 +4,7 @@ import LandingPage from './Containers/LandingPage.js';
 import LandingNavbar from './Components/LandingNavbar';
 import LoginPage from './Containers/LoginPage';
 import SignupPage from './Containers/SignupPage';
-
+import Dashboard from './Containers/Dashboard';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path='/test' element={<LandingNavbar/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/signup' element={<SignupPage/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
         </Routes>
       </Router>
     </div>
