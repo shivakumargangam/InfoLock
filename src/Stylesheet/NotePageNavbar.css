@@ -1,0 +1,50 @@
+ .NPNavMain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(180, 177, 177);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.Links {
+    text-decoration: none;
+    color: black;
+}
+
+.NPNavlogo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+}
+.NPNavlogo img{
+    height: 75px;
+    margin-right: 10px;
+}
+.NPNavlogo span{
+    font-size: 65px;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+.NPNavLogoutdiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+.NPNavLogoutBox span{
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.NPNavLogoutBox{
+    border: 3px solid #00A82D;
+    border-radius: 20px;
+    margin-right: 20px;
+}

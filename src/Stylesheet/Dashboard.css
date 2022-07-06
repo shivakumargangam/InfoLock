@@ -11,18 +11,18 @@
 }
 
 
-.LPNavlogo{
+.DBNavlogo{
     display: flex;
     flex-direction: row;
     margin-left: 20px;
     align-items: center;
 }
-.LPNavlogo img{
+.DBNavlogo img{
     height: 75px;
     margin-right: 10px;
 }
 
-.LPNavlogo span{
+.DBNavlogo span{
     font-size: 50px;
     font-family: 'Poppins';
     font-weight: 600;
