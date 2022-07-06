@@ -10,8 +10,8 @@ const NotePageBody = () =>{
                 <img src={Cross}/>  
             </div>
             <div className='Content'>
-                <input type='text' class="ContentDiv"  ></input>
-
+                {/* <input type='textarea' class="ContentDiv"  ></input> */}
+                <textarea>Default text</textarea>
             </div>
             <div className='SaveButtonDiv'>
             <span>Save</span>
