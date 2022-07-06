@@ -9,7 +9,7 @@ const Dashboard = () => {
         <div >
             <div className='DBNavMain'>
                 <Link to ='/' className='Links'>
-                    <div className='LPNavlogo'>
+                    <div className='DBNavlogo'>
                         <img src={Logo}/>
                         <span>INFOLOCK</span>
                     </div>

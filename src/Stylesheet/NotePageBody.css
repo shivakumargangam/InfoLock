@@ -1,0 +1,44 @@
+.TitleDiv{
+    width: 90%;
+    margin-top: 40px;
+    padding: 0 0 5px 20px;
+    height: 50px;
+    border-width: 0 0 3px 0;
+    border-style: outset;
+    border-color: rgb(236, 19, 19);
+    font-size: 40px;
+    color: black;
+}
+.ContentDiv{
+    /* display:flex; */
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 400px;
+    width: 93%;
+}
+.SaveButtonDiv{
+    margin-left: 90%;
+    margin-top: 20px;
+    padding: 5px 28px;
+    width: fit-content;
+    background-color: #00A82D;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.SaveButtonDiv:hover{
+    background-color: #00a82dcd;
+}
+.SaveButtonDiv span{
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: white;
+}
+.Body{
+    text-align: left;
+}
+.Title img{
+    height: 60px;
+}
+.Title{
+    text-align: center;
+}
