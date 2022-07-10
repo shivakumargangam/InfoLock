@@ -2,11 +2,23 @@ import React from 'react';
 import '../Stylesheet/Dashboard.css';
 import Logo from '../media/Logo.svg';
 import Plus from '../media/PlusSymbol.svg'
-import { Link } from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
+import Cookies from "universal-cookie";
+// import app from "../firebase.config";
 const notes=[["12/10/2022","Title of Note"],["13/10/2022","Title of Note2"],["14/10/2022","Title of Note3"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"]];
 const Dashboard = () => {
-    return ( 
-        <div >
+    const navigate = useNavigate();
+    const cookie= new Cookies();
+    return (
+        
+        <div onPointerMove={()=>
+        {
+        const user =cookie.get("user");
+        if(!user)
+        {
+            navigate("/login");
+        }
+        }}>
             <div className='DBNavMain'>
                 <Link to ='/' className='Links'>
                     <div className='DBNavlogo'>

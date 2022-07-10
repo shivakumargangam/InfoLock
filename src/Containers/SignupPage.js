@@ -1,10 +1,11 @@
 import React from 'react';
 import '../Stylesheet/Signup.css';
-import LoginLogo from '../media/LoginLogo.svg'
-import {Link} from 'react-router-dom';
+import LoginLogo from '../media/LoginLogo.svg';
+import {Link, useNavigate} from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from "../firebase.config";
 const SignupPage = () => {
+    const navigate = useNavigate();
     console.log(app);
     const auth = getAuth();
 const signup=()=>{
@@ -15,7 +16,8 @@ const signup=()=>{
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    alert("sucess");
+    // alert("sucess");
+    navigate("/dashboard");
     // ...
   })
   .catch((error) => {

@@ -1,5 +1,5 @@
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
@@ -16,4 +16,5 @@ const app = getApps.Length > 0 ? getApp() : initializeApp(firebaseConfig);
 console.log(app);
 const firestore = getFirestore(app);
 const storage = getStorage(app);
+// const db=app.firestore();
 export default {app,firestore,storage};
