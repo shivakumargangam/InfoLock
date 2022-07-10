@@ -1,13 +1,17 @@
 .TitleDiv{
     width: 90%;
     margin-top: 40px;
-    padding: 0 0 5px 20px;
+    /* padding: 0 0 5px 20px; */
     height: 50px;
-    border-width: 0 0 3px 0;
+    /* border-width: 0 0 3px 0;
     border-style: outset;
-    border-color: rgb(236, 19, 19);
+    border-color: rgb(236, 19, 19); */
     font-size: 40px;
-    color: black;
+    border: none;
+}
+.TitleDiv:focus
+{ 
+    outline: 0;
 }
 .ContentDiv{
     /* display:flex; */
@@ -34,11 +38,63 @@
     color: white;
 }
 .Body{
-    text-align: left;
+    /* text-align: left;
+    display: flex;
+    flex-direction: column; */
+    align-items: center;
 }
 .Title img{
+    transform:translate(10%,-5%);
+    border: 1px solid grey;
+    border-radius: 50%;
     height: 60px;
+    width: 60px;
 }
 .Title{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: stretch; */
+    /* align-items: center;  */
     text-align: center;
+    /* border-width: 0 0 3px 0;
+    border-style: outset;
+    border-color: rgb(236, 19, 19); */
+    
+}
+.TitleDiv input
+{
+    border: none;
+}
+.Title input:focus{
+    border: none;
+}
+.NPBtextarea{
+    border: 2px solid rgba(0, 0, 0, 0.181);
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+.Content{
+    margin-top: 15px;
+    margin-left: 40px;
+    height: 400px;
+    width: 93%;
+}
+textarea:focus, input:focus{ outline: 0; }
+.NPBTitlemain{
+    margin-left: 20px;
+}
+.NPBline{
+        border-width: 0 0 3px 0;
+    border-style: outset;
+    border-color: rgb(236, 19, 19);
+    width: 94%;
+    
+}
+.NPBlinecenter
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
 }
