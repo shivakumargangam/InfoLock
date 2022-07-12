@@ -2,8 +2,10 @@ import React from 'react';
 import '../Stylesheet/NotePageBody.css';
 import Cross from '../media/CrossSymbol.svg';
 import {useState} from 'react';
+// import colref from "../firebase.config";
 import firestore from "../firebase.config";
-import {doc,setDoc, updateDoc } from "firebase/firestore";
+import {addDoc, collection, doc,setDoc, updateDoc } from "firebase/firestore";
+import Cookies from 'universal-cookie';
 const NotePageBody = () =>{
     const [message, setMessage] = useState('');
     const handleMessageChange = event => {
@@ -31,25 +33,21 @@ const NotePageBody = () =>{
         const msg=message;
         console.log(title);
         console.log(msg);
-        try{
+        // try{
             const data={
                 date:`${Date.now()}`,
+                title:title,    
                 message: msg,
                 key:"key",
             }
-            console.log(firestore);
-            // const docref=doc(firestore,collection(firestore,"shiva"),title);
-            // await setDoc(docref,data,{merge:true});
-
-            const ref=doc(firestore,"shiva","title");
-            console.log(ref);
-            // await updateDoc(ref,data);
-        }
-        catch(e)
-        {
-            // console.log(e);
-        }
+        const namecookie= new Cookies();
+        const name=namecookie.get("name");
+        const collectionref =collection(firestore,name);
+        addDoc(collectionref,data).then(()=>{
+            console.log("data Added");
+        });
     }
+
     return (
         <div className='Body'>
                <div className='Title'>

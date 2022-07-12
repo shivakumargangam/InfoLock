@@ -1,6 +1,6 @@
-import { getApp, getApps, initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore/lite";
-import { getStorage } from "firebase/storage";
+import { getApp, getApps, initializeApp } from "firebase/app"
+import { collection ,getFirestore} from "firebase/firestore"
+import { getStorage } from "firebase/storage"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBjmxYqgkeBjglikVJhEJTdR9ajjyQsc-k",
@@ -12,9 +12,11 @@ const firebaseConfig = {
   messagingSenderId: "334475252001",
   appId: "1:334475252001:web:a9c67a602611c13ff16e60",
 };
-const app = getApps.Length > 0 ? getApp() : initializeApp(firebaseConfig);
-console.log(app);
+// const app = getApps.Length > 0 ? getApp() : initializeApp(firebaseConfig);
+const app= initializeApp(firebaseConfig);
+// console.log(app);
 const firestore = getFirestore(app);
+console.log(firestore);
 const storage = getStorage(app);
-// const db=app.firestore();
-export default {app,firestore,storage};
+// const colref =collection(firestore,"shiva");
+export  {app,firestore as default,storage};

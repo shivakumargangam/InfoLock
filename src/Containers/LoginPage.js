@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../Stylesheet/Login.css";
 import { Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import app from "../firebase.config";
+// import app from "../firebase.config";
 import Cookies from "universal-cookie";
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -18,6 +18,9 @@ const LoginPage = () => {
         // props.setUserData(email);
         const cookies = new Cookies();
         cookies.set("user", user, { path: "/",maxAge: 3600 });
+        const name=email.match(/(.*)@/)[1];
+        const nameCookie= new Cookies();
+        nameCookie.set("name",name,{path:"/",maxAge:3600});
         console.log(cookies.get("user"));
         navigate("/dashboard");
       })
