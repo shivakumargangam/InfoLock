@@ -1,14 +1,43 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import '../Stylesheet/Dashboard.css';
 import Logo from '../media/Logo.svg';
 import Plus from '../media/PlusSymbol.svg'
 import { Link,useNavigate} from "react-router-dom";
 import Cookies from "universal-cookie";
-// import app from "../firebase.config";
-const notes=[["12/10/2022","Title of Note"],["13/10/2022","Title of Note2"],["14/10/2022","Title of Note3"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"]];
+import {collection,getDocs } from "firebase/firestore";
+import firestore from "../firebase.config";
+// let notes=[["12/10/2022","Title of Note"],["13/10/2022","Title of Note2"],["14/10/2022","Title of Note3"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"]];
+let notes=[];
+
 const Dashboard = () => {
+    useEffect(() => {
+         getData();
+      });
+    const [document, setDocument = (notes) => {
+        document = notes
+    }]=useState([]);
+//     const setDocument = (notes)=>
+// {
+//     document=notes;
+// }
     const navigate = useNavigate();
     const cookie= new Cookies();
+    const getData= async ()=>
+    {
+        const namecookie= new Cookies();
+        const name=namecookie.get("name");
+        const collectionref =collection(firestore,name);
+        const querySnapshot = await getDocs(collectionref);
+        if(notes.length===0)
+        {
+            console.log("print");
+            querySnapshot.forEach((doc) => {
+            notes.push(doc.data());
+            });
+            notes.sort((a,b)=> parseInt(b.date)-parseInt(a.date));
+            setDocument(notes);
+        }
+    }
     return (
         
         <div onPointerMove={()=>
@@ -35,57 +64,21 @@ const Dashboard = () => {
         <div className='DBBody'>
             <span>Your Notes</span>
             <div className='DBNotes'>
-                {/* <div className='DBNoteBox'>
-                    <div className='DBNoteHead'>
-                        <span>12/10/2022</span>
-                    </div>
-                    <div className='DBNotedesc'>
-                        <span>Title of the Note</span>
-                    </div>
-                </div>
-                <div className='DBNoteBox'>
-                    <div className='DBNoteHead'>
-                        <span>12/10/2022</span>
-                    </div>
-                    <div className='DBNotedesc'>
-                        <span>Title of the Note</span>
-                    </div>
-                </div>
-                <div className='DBNoteBox'>
-                    <div className='DBNoteHead'>
-                        <span>12/10/2022</span>
-                    </div>
-                    <div className='DBNotedesc'>
-                        <span>Title of the Note</span>
-                    </div>
-                </div>
-                <div className='DBNoteBox'>
-                    <div className='DBNoteHead'>
-                        <span>12/10/2022</span>
-                    </div>
-                    <div className='DBNotedesc'>
-                        <span>Title of the Note</span>
-                    </div>
-                </div>
-                <div className='DBPlusBox'>
-                    <div className='DBPluslogo'>
-                        <img src={Plus}/>
-                    </div>
-                    <div className='DBNotedesc'>
-                        <span>Add</span>
-                    </div>
-                </div> */}
-                {notes.map((test)=>
+                {document.map((test)=>
                 {
+                    const date= new Date(parseInt(test.date));
+                    const fdate=date.getDate().toString().padStart(2,"0")+'/'+(date.getMonth()+1).toString().padStart(2,"0")+"/"+date.getFullYear();
+                    console.log(date);
+                    // console.log(test);
                     return(
                         <div className='DBNoteBox' onClick={()=>{
                             alert("hi");
                         }}>
                     <div className='DBNoteHead'>
-                        <span>{test[0]}</span>
+                        <span>{fdate}</span>
                     </div>
                     <div className='DBNotedesc'>
-                        <span>{test[1]}</span>
+                        <span>{test.title}</span>
                     </div>
                 </div>
                     );
