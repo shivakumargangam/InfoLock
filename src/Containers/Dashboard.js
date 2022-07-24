@@ -9,17 +9,13 @@ import firestore from "../firebase.config";
 // let notes=[["12/10/2022","Title of Note"],["13/10/2022","Title of Note2"],["14/10/2022","Title of Note3"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"],["12/10/2022","Title of Note"]];
 let notes=[];
 
-const Dashboard = () => {
+const Dashboard = () => {  
     useEffect(() => {
          getData();
       });
     const [document, setDocument = (notes) => {
         document = notes
     }]=useState([]);
-//     const setDocument = (notes)=>
-// {
-//     document=notes;
-// }
     const navigate = useNavigate();
     const cookie= new Cookies();
     const getData= async ()=>
@@ -30,7 +26,6 @@ const Dashboard = () => {
         const querySnapshot = await getDocs(collectionref);
         if(notes.length===0)
         {
-            console.log("print");
             querySnapshot.forEach((doc) => {
             notes.push(doc.data());
             });
@@ -68,31 +63,30 @@ const Dashboard = () => {
                 {
                     const date= new Date(parseInt(test.date));
                     const fdate=date.getDate().toString().padStart(2,"0")+'/'+(date.getMonth()+1).toString().padStart(2,"0")+"/"+date.getFullYear();
-                    console.log(date);
-                    // console.log(test);
                     return(
-                        <div className='DBNoteBox' onClick={()=>{
-                            alert("hi");
-                        }}>
-                    <div className='DBNoteHead'>
-                        <span>{fdate}</span>
-                    </div>
-                    <div className='DBNotedesc'>
-                        <span>{test.title}</span>
-                    </div>
-                </div>
+                            <Link to={{pathname:`/notepage/?noteid=${test.title}`}}>
+                                <div className='DBNoteBox'onClick={()=>{
+                                }}>
+                                    <div className='DBNoteHead'>
+                                        <span>{fdate}</span>
+                                    </div>
+                                    <div className='DBNotedesc'>
+                                        <span>{test.title}</span>
+                                    </div>
+                                </div>
+                            </Link>
                     );
                 })}
-                <div className='DBPlusBox' onClick={()=>{
-                    alert("add");
-                }}>
-                    <div className='DBPluslogo'>
-                        <img src={Plus}/>
+                <Link to='/notepage' className='DBlink'>
+                    <div className='DBPlusBox'>
+                        <div className='DBPluslogo'>
+                            <img src={Plus}/>
+                        </div>
+                        <div className='DBNotedesc'>
+                            <span>Add</span>
+                        </div>
                     </div>
-                    <div className='DBNotedesc'>
-                        <span>Add</span>
-                    </div>
-                </div>
+                </Link>
             </div>
         </div>
             

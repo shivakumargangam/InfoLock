@@ -3,15 +3,20 @@ import '../Stylesheet/NotePageBody.css';
 import Cross from '../media/CrossSymbol.svg';
 import {useState} from 'react';
 // import colref from "../firebase.config";
-import firestore from "../firebase.config";
-import {addDoc, collection, doc,setDoc, updateDoc } from "firebase/firestore";
+import firestore, { app } from "../firebase.config";
+import {doc,setDoc} from "firebase/firestore";
+// import { getDatabase, ref, set } from "firebase/database";
+
 import Cookies from 'universal-cookie';
-const NotePageBody = () =>{
+const NotePageBody = (props) =>{
+    const search = window.location.search;
+    const params = new URLSearchParams(search);
+    const noteid = params.get('noteid');
+    console.log(noteid);
     const [message, setMessage] = useState('');
     const handleMessageChange = event => {
         setMessage(event.target.value);
       };
-
     var changed=false;
     const exit= ()=>{
         console.log(changed);
@@ -42,12 +47,15 @@ const NotePageBody = () =>{
             }
         const namecookie= new Cookies();
         const name=namecookie.get("name");
-        const collectionref =collection(firestore,name);
-        addDoc(collectionref,data).then(()=>{
-            console.log("data Added");
-        });
+        // const collectionref =collection(firestore,name);
+        // addDoc(collectionref,data).then(()=>{
+        //     console.log("data Added");
+        // });
+        // const db = getDatabase(app);
+        // set(ref(db, name + '/'+title), data);
+        setDoc(doc(firestore,name,title),data);
     }
-
+    // console.log(props.test);
     return (
         <div className='Body'>
                <div className='Title'>
