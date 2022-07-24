@@ -64,7 +64,7 @@ const Dashboard = () => {
                     const date= new Date(parseInt(test.date));
                     const fdate=date.getDate().toString().padStart(2,"0")+'/'+(date.getMonth()+1).toString().padStart(2,"0")+"/"+date.getFullYear();
                     return(
-                            <Link to={{pathname:`/notepage/?noteid=${test.title}`}}>
+                            <Link to={{pathname:`/notepage/?noteid=${test.title}`}} style={{textDecoration: 'none'}}>
                                 <div className='DBNoteBox'onClick={()=>{
                                 }}>
                                     <div className='DBNoteHead'>
