@@ -1,0 +1,16 @@
+.PopupmainDiv
+{
+    display: block;
+  position: fixed;
+  top: -13%;
+  left: 30%;
+  width: 600px;
+  height: 900px;
+  overflow: auto;
+  transition: all 0.3s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+  
+}

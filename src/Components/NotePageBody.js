@@ -8,7 +8,7 @@ import firestore, { app } from "../firebase.config";
 import {doc,setDoc,collection,getDoc,deleteDoc} from "firebase/firestore";
 // import { getDatabase, ref, set } from "firebase/database";
 import Cookies from 'universal-cookie';
-
+import AesCtr from './aes-ctr';
 
 const NotePageBody = () =>{
     const navigate= useNavigate();
@@ -37,7 +37,8 @@ const NotePageBody = () =>{
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
             console.log("Document data:", docSnap.data());
-            setMessage(docSnap.data().message);
+            const plain = AesCtr.decrypt(docSnap.data().message,docSnap.data().key,256);
+            setMessage(plain);
             setNid(docSnap.data().title);
         } else {
             console.log("No such document!");
@@ -70,14 +71,19 @@ const NotePageBody = () =>{
     const save= async()=>{
         const title = document.getElementById("title").value;
         const msg=message;
-        console.log(title);
-        console.log(msg);
+        // console.log(title);
+        // console.log(msg);
+        const key="key";
+        const cipher =AesCtr.encrypt(msg,key,256);
+        console.log("cipher::"+cipher);
+        // const plain =AesCtr.decrypt(cipher,key,256);
+        // console.log("plain::"+plain);
         // try{
             const data={
                 date:`${Date.now()}`,
                 title:title,    
-                message: msg,
-                key:"key",
+                message: cipher,
+                key:key,
             }
         const namecookie= new Cookies();
         const name=namecookie.get("name");
