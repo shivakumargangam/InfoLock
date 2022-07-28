@@ -1,0 +1,15 @@
+.FAQBodyDiv{
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    margin-left: 10px;
+}
+.FAQQuest{
+    font-weight:bolder;
+    padding: 20px 25px ;
+}
+.FAQAns{
+    padding: 20px 55px ;
+}

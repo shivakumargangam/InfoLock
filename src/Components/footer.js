@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../media/logoFooter.svg";
+import Logo from "../media/Logo.svg";
 import FBIcon from "../media/facebookFooter.svg";
 import InstagramIcon from "../media/instagramFooter.svg";
 import DiscordIcon from "../media/discordFooter.svg";
@@ -12,7 +12,7 @@ const footer = () => {
         <div className="footerIntroDiv">
           <img src={Logo} className="footerIntroLogo" alt="img" />
           <span className="footerIntroBody">
-            A platform using which you can assess your self from any corner of
+            A platform using which you can assess your notes from any corner of
             the world.
           </span>
         </div>

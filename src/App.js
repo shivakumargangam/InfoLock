@@ -6,6 +6,8 @@ import LoginPage from './Containers/LoginPage';
 import SignupPage from './Containers/SignupPage';
 import Dashboard from './Containers/Dashboard';
 import Notepage from './Containers/NotePage';
+import FAQ from './Components/FAQ';
+import About from './Components/About';
 import { useState } from 'react';
 function App() {
   let [notes,setNotes]=useState("");
@@ -14,11 +16,12 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
-          <Route path='/test' element={<LandingNavbar/>}/>
+          <Route path='/About' element={<About/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/signup' element={<SignupPage/>}/>
           <Route path='/dashboard' element={<Dashboard setNotes={setNotes}/>}/>
           <Route path='/notepage' element={<Notepage notes={notes}/>}/>
+          <Route path='/FAQ' element={<FAQ/>}/>
         </Routes>
       </Router>
     </div>

@@ -12,9 +12,9 @@ const LandingNavbar = () => {
                 </div>
             </Link>
             <div className='LPNavLinks'>
-                <Link to='/test'><span>About</span></Link>
+                <Link to='/About'><span>About</span></Link>
                 <Link to='/' className='Links'><span>Overview</span></Link>
-                <Link to='/' className='Links'><span>FAQ</span></Link>
+                <Link to='/FAQ' className='Links'><span>FAQ</span></Link>
             </div>
             <div className='LPNavSigndiv'>
                 <Link to='/login' className='Links'><span>Login</span></Link>
