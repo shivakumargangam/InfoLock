@@ -7,10 +7,11 @@ const LandingBody = () => {
         <div className='LPbodyDiv'>
            <div className='LPTextdiv'>
                <div className='LPHeading'>
-                   <b><span>Your Toughts are<br/> Safe with Us</span></b>
+                   <b><span>Your Thoughts are<br/> Safe with Us</span></b>
                </div>
                <div className='LPdesc'>
-                   <span>Two Lines Two Lines Two Lines Two<br/> Lines Two Lines</span>
+                
+                   <span><br/>Write Your own private infromation page! <br/> Access your information on our Website.<br/>  You can read & write entries of your life.<br/>Personal notes on your System!<br/> </span>
                </div>
                <div className='LPSignupdiv'>
                <Link to='/signup' className='Links'>

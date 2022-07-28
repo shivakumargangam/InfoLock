@@ -13,18 +13,18 @@ const LandingAdvantages = () => {
             </div>
             <div className='LPAdvBox'>
                 <div className='LPAdvHead'>
-                    <span>Secure</span>
+                    <span>Password protection</span>
                 </div>
                 <div className='LPAdvdesc'>
-                    <span>Your Data is encrypted twice to increase security</span>
+                    <span>Protect your entries with password.</span>
                 </div>
             </div>
             <div className='LPAdvBox'>
                 <div className='LPAdvHead'>
-                    <span>Secure</span>
+                    <span>Easy to use  </span>
                 </div>
                 <div className='LPAdvdesc'>
-                    <span>Your Data is encrypted twice to increase security</span>
+                    <span>It's extremly easy to use!</span>
                 </div>
             </div>
         </div>
