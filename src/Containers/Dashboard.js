@@ -12,6 +12,8 @@ let notes=[];
 
 const Dashboard = () => {  
     const [popup,setPopup] = useState(false);
+    const [key,setKey] =useState('');
+    const [title,setTitle]=useState('');
     useEffect(() => {
          getData();
       });
@@ -46,7 +48,7 @@ const Dashboard = () => {
         }
         }}>
             {popup &&(
-               <PopupBox/>
+               <PopupBox title={title}/>
             )}
             <div id='DBMainDiv'>
                 <div className='DBNavMain'>
@@ -73,6 +75,7 @@ const Dashboard = () => {
                                 // <Link to={{pathname:`/notepage/?noteid=${test.title}`}} style={{textDecoration: 'none'}}>
                                     <div className='DBNoteBox'onClick={()=>{
                                         setPopup(true);
+                                        setTitle(test.title);
                                         const square =document.getElementById("DBMainDiv");
                                         square.style.filter = "blur(6px)";
                                         square.style.height = "100vh";
