@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../media/Logo.svg";
+import Logo from "../media/LogoFooter.svg";
 import FBIcon from "../media/facebookFooter.svg";
 import InstagramIcon from "../media/instagramFooter.svg";
 import DiscordIcon from "../media/discordFooter.svg";
@@ -53,7 +53,7 @@ const footer = () => {
         <div className="footerContactDiv">
           <span className="footerContactTitle">Contact</span>
           <div className="footerContactContent"><span className="footerContactEmail">
-              Email: Kamutalamanisai26@gmail.com<br/>
+              <a href="mailto:kamutalamanisai26@gmail.com">Email: Kamutalamanisai26@gmail.com</a><br/>
               Email: gangamshivakumar01@gmail.com
             </span>
             <span className="footerContactPhone">Phone: +91 8500536885<br/>

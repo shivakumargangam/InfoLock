@@ -13,7 +13,7 @@ const LandingAdvantages = () => {
             </div>
             <div className='LPAdvBox'>
                 <div className='LPAdvHead'>
-                    <span>Password protection</span>
+                    <span>Password protected</span>
                 </div>
                 <div className='LPAdvdesc'>
                     <span>Protect your entries with password.</span>
