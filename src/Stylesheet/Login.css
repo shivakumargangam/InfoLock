@@ -48,4 +48,15 @@
     display: block;
     border-radius: 22px;
     border-color: white;
+    cursor: pointer;
+}
+.LBLoginButton:hover{
+
+    background-color:#00a82dcd;
+}
+a:hover{
+    color:#00a82dcd;
+}
+a{
+    color:#00A82D
 }

@@ -53,8 +53,8 @@ const footer = () => {
         <div className="footerContactDiv">
           <span className="footerContactTitle">Contact</span>
           <div className="footerContactContent"><span className="footerContactEmail">
-              <a href="mailto:kamutalamanisai26@gmail.com">Email: Kamutalamanisai26@gmail.com</a><br/>
-              Email: gangamshivakumar01@gmail.com
+              <a href="mailto:kamutalamanisai26@gmail.com" >Email: Kamutalamanisai26@gmail.com</a><br/>
+              <a href="mailto:gangamshivakumar01@gmail.com">Email: gangamshivakumar01@gmail.com</a><br/>
             </span>
             <span className="footerContactPhone">Phone: +91 8500536885<br/>
             Phone: +91 8500823589</span>

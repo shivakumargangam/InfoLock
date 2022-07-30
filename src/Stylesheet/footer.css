@@ -100,6 +100,15 @@
 .footerContactContent span {
   margin-top: 2%;
 }
+a:hover{
+  color: #00A82D;;
+}
+a{
+  color: white
+}
+
+
+
 @media screen and (max-width: 1920px) {
   .footerDisplay1366Div {
     width: 1900px;
@@ -130,3 +139,4 @@
     width: 1070px;
   }
 }
+
