@@ -28,6 +28,7 @@
     background-color: #00A82D;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
 }
 .SaveButtonDiv:hover{
     background-color: #00a82dcd;
