@@ -1,3 +1,35 @@
+.DecryptionKeyDiv{
+    margin-left: 35px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.NPFootButtonDiv{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.DecryptionKeyDiv input{
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+.Decryline{
+    margin-left: 175px;
+    border-width: 0 0 3px 0;
+    border-style: outset;
+    border-color: #00A82D;
+    width: 70%;
+}
+
+.DecryptionKeyDiv input
+{
+    border: none;
+}
+
 .TitleDiv{
     width: 90%;
     margin-top: 40px;
@@ -41,6 +73,10 @@
 }
 
 .DeleteButtonDiv{
+
+
+    /* margin-left: 90px; */
+
     width: fit-content; 
     border: 3px solid #00A82D;
     border-radius: 10px;
@@ -55,7 +91,9 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 40px;
+    margin-right: 25px;
+    /* justify-content: space-between; */
+    /* margin-top: 40px; */
 }
 
 
@@ -109,7 +147,7 @@ textarea:focus, input:focus{ outline: 0; }
     margin-left: 20px;
 }
 .NPBline{
-        border-width: 0 0 3px 0;
+    border-width: 0 0 3px 0;
     border-style: outset;
     border-color: rgb(236, 19, 19);
     width: 94%;
