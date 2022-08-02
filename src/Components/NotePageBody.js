@@ -22,11 +22,17 @@ const NotePageBody = () =>{
     const collectionref =collection(firestore,name); 
     const [message, setMessage] = useState('');
     const [nid, setNid] = useState('');
+    const [key,setKey]=useState('');
     const [changed,setChanged]=useState(false);
     const handleMessageChange = event => {
         setMessage(event.target.value);
         setChanged(true);
       };
+    const handleKeyChange = event=>
+    {
+        setKey(event.target.value);
+        setChanged(true);
+    }
     const handleTitleChange = event=>{
         setNid(event.target.value);
         setChanged(true);
@@ -74,7 +80,7 @@ const NotePageBody = () =>{
         const msg=message;
         // console.log(title);
         // console.log(msg);
-        const key="key";
+        
         const cipher =AesCtr.encrypt(msg,key,256);
         console.log("cipher::"+cipher);
         // const plain =AesCtr.decrypt(cipher,key,256);
@@ -105,12 +111,12 @@ const NotePageBody = () =>{
                     <div className='NPBline'></div>
                 </div>
                 <div className='Content'>
-                    <textarea  value={message} onChange={handleMessageChange} className='NPBtextarea' onInputCapture={()=>{changed=true}}>Default text</textarea>
+                    <textarea  value={message} onChange={handleMessageChange} className='NPBtextarea' onInputCapture={()=>{setChanged(true)}}>Default text</textarea>
                 </div>
                 <div className='NPFootButtonDiv'>
                 <div className='DecryptionKeyDiv'>
                     Decryption key: 
-                    <input type="text" className='DecryptDiv' placeholder='Enter Decryption key'>
+                    <input type="text" className='DecryptDiv' placeholder='Enter Decryption key'value={key} onChange={handleKeyChange}>
 
                     </input>
                     <div className='Decryline'></div>
