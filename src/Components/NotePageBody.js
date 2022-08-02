@@ -107,6 +107,14 @@ const NotePageBody = () =>{
                 <div className='Content'>
                     <textarea  value={message} onChange={handleMessageChange} className='NPBtextarea' onInputCapture={()=>{changed=true}}>Default text</textarea>
                 </div>
+                <div className='NPFootButtonDiv'>
+                <div className='DecryptionKeyDiv'>
+                    Decryption key: 
+                    <input type="text" className='DecryptDiv' placeholder='Enter Decryption key'>
+
+                    </input>
+                    <div className='Decryline'></div>
+                </div>
                 <div className='NPButtons'>
                     <div className="DeleteButtonDiv" onClick={()=>{
                         const namecookie= new Cookies();
@@ -121,6 +129,7 @@ const NotePageBody = () =>{
                     <div className='SaveButtonDiv'onClick={save}>
                         <span>Save</span>
                     </div>
+                </div>
                 </div>
         </div>
     );
