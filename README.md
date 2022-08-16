@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Depolyed at https://infolock079164.web.app/
 
 ## Available Scripts
 
